@@ -1,0 +1,32 @@
+{
+  "name": "newscollector",
+  "version": "1.0.0",
+  "description": "Package for NewsCollector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/setonr/NewsCollector.git"
+  },
+  "keywords": [
+    "news",
+    "mongodb"
+  ],
+  "author": "Seton Raynor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/setonr/NewsCollector/issues"
+  },
+  "homepage": "https://github.com/setonr/NewsCollector#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.0",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0"
+  }
+}
