@@ -1,0 +1,11 @@
+<h4>Top Headlines</h4>
+
+{{#each Article}}
+  <div class="row">
+    <div class="col-sm-12 articleBox">
+      <h2 class="articleTitle">{{this.title}}</h2>
+      <h3 class="articleLink">{{this.link}}</h2>
+      <button href="/modal" type="submit">Add note</button>
+    </div>
+  </div>
+{{/each}}
