@@ -8,9 +8,9 @@
   <div class="row">
     <div class="col-sm-12 articleBox">
       <h2 class="articleTitle">{{this.title}}</h2>
-      <h3 class="articleLink">{{this.link}}</h2>
-      <button data-id="{{this._id}}" class="btn addNote" type="submit">Add note</button>
-      <button data-id="{{this._id}}" class="btn deleteNote" type="submit">Delete this act</button>
+      <h3><a class="articleLink" href={{this.link}}>{{this.link}}</a></h2>
+      <button id="{{this._id}}" class="btn addNote" type="submit">Add note</button>
+      <button id="{{this._id}}" class="btn deleteNote" type="submit">Delete this act</button>
     </div>
   </div>
   {{/if}}

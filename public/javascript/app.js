@@ -14,6 +14,7 @@ $(document).on("click", ".addNote", function() {
   $("#notes").empty();
 
   var currentId = $(this).attr("id");
+  alert(currentId);
 
   $.ajax({
     method: "GET",
@@ -21,7 +22,7 @@ $(document).on("click", ".addNote", function() {
   })
   .done(function(data) {
     console.log(data);
-    $(".modal-title").html("<h5>Add Note To: " + data.title + "</h5>");
+    $(".modal-title").html("Add Note To: " + data.title);
     $(".modal-body").html("<input id='titleinput' name='title' placeholder='Note Title'>");
     $(".modal-body").append("<input id='authorName' name='author' placeholder='Your Name'>");
     $(".modal-body").append("<textarea id='bodyinput' name='body' placeholder='Your note'></textarea>");
