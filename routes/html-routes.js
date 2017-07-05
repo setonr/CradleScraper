@@ -11,15 +11,13 @@ module.exports = function(app) {
   });
 
   app.get("/saved", function(req, res) {
-    var headlines = {};
-    Article.find({"savedArticle": true}, function(error, doc) {
+    Article.find({}, function(error, doc) {
       if (error) {
         res.send(error);
       }
       else {
-        headlines = { "articles": doc }
+       res.render("saved.handlebars", { "articles": doc });
       }
-    })
-    res.render("saved", headlines);
+    });
   });
 };

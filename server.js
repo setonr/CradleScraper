@@ -4,7 +4,6 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var expressHbs = require("express-handlebars");
-var path = require("path");
 //scraper requires
 var request = require("request");
 var cheerio = require("cheerio");
@@ -21,7 +20,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.text());
 app.use(bodyParser.json({type: "application/vnd.api+json" }));
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
 var mongodbURI = "mongodb://heroku_wcsq2591:of7uheoiv7q5rkie7sc28qfvqj@ds139082.mlab.com:39082/heroku_wcsq2591";
 

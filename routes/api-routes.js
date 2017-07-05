@@ -37,7 +37,7 @@ module.exports= function(app) {
   });
 
 //saving articles
-app.post("/articles/:id", function(req, res) {
+app.post("/saved/:id", function(req, res) {
   Article.findOneAndUpdate({"_id": req.params.id}, {"savedArticle": true})
     .exec(function(error, doc) {
       if (error) {
@@ -47,28 +47,6 @@ app.post("/articles/:id", function(req, res) {
         res.send(doc);
       }
     });
-    // var savedArticle = req.body.savedArticle;
-
-    // if (savedArticle === true) {
-    //   Article.findOneAndUpdate({ "_id": req.params.id}, {"savedArticle": true})
-    //     .exec(function(err, doc) {
-    //       if (err) {
-    //         console.log(err);
-    //       } else { 
-    //         res.send(doc);
-    //       }
-    //     });
-    // }
-    // else if (savedArticle === false) {
-    //   Article.findOneAndUpdate({ "_id": req.params.id }, { "savedArticle": false })
-    //     .exec(function(err, doc) {
-    //       if (err) {
-    //         console.log(err);
-    //       } else { 
-    //         res.send(doc);
-    //       }
-    //     })
-    // }
 });
 
 //add new note
@@ -80,7 +58,7 @@ app.post("/articles/:id", function(req, res) {
             console.log(error)
           }
           else {
-            Article.findOneAndUpdate({"_id": req.params.id}, {"note": doc._id})
+            Article.findOneAndUpdate({"_id": req.params.id}, {$push: {"note": doc._id} })
               .exec(function(err, doc) {
                 if (err) {
                   console.log(err)
