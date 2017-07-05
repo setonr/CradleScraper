@@ -1,6 +1,6 @@
-$(document).on("click", "#test", function() {
+$("#test").on("click", function() {
   alert("hey!");
-})
+});
 
 //to display note modal
 function showModal() {

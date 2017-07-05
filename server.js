@@ -21,12 +21,12 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.text());
 app.use(bodyParser.json({type: "application/vnd.api+json" }));
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname + "/public")));
 
 var mongodbURI = "mongodb://heroku_wcsq2591:of7uheoiv7q5rkie7sc28qfvqj@ds139082.mlab.com:39082/heroku_wcsq2591";
 
-mongoose.connect(mongodbURI);
-// mongoose.connect("mongodb://localhost/articles_db");
+// mongoose.connect(mongodbURI);
+mongoose.connect("mongodb://localhost/articles_db");
 var db = mongoose.connection;
 
 db.on("error", function(error) {
