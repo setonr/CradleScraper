@@ -9,6 +9,8 @@
 
     <title>NewsCollector</title>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -18,14 +20,34 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!--Our CSS link-->
-    <link rel="stylesheet" type="text/css" href="/css/shop-homepage.css">
+    <link rel="stylesheet" type="text/css" href="">
 </head>
     <body>
         <div class="jumbotron">
             <h1>NewsCollector: The Onion Edition</h1>
             <p>A collection of the latest headlines from the internet's finest news source.</p>
-            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Collect headlines!</a></p>
+            
+            <p><a class="btn btn-primary btn-lg" href="/saved" role="button">See saved headlines!</a></p>
         </div>
         {{{ body }}}
+
+        <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                        <button type="button" class="modalClose" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+
+                <div class="modal-body">		
+                    <!-- JS Input only -->
+                </div>
+            </div>
+            </div>
+		</div>
     </body>
+<script type="text/javascript" src="./javascript/app.js">
 </html>

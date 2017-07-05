@@ -36,5 +36,88 @@ module.exports= function(app) {
     });
   });
 
+//saving articles
+app.post("/articles/:id", function(req, res) {
+  Article.findOneAndUpdate({"_id": req.params.id}, {"savedArticle": true})
+    .exec(function(error, doc) {
+      if (error) {
+        console.log(error);
+      }
+      else {
+        res.send(doc);
+      }
+    });
+    // var savedArticle = req.body.savedArticle;
+
+    // if (savedArticle === true) {
+    //   Article.findOneAndUpdate({ "_id": req.params.id}, {"savedArticle": true})
+    //     .exec(function(err, doc) {
+    //       if (err) {
+    //         console.log(err);
+    //       } else { 
+    //         res.send(doc);
+    //       }
+    //     });
+    // }
+    // else if (savedArticle === false) {
+    //   Article.findOneAndUpdate({ "_id": req.params.id }, { "savedArticle": false })
+    //     .exec(function(err, doc) {
+    //       if (err) {
+    //         console.log(err);
+    //       } else { 
+    //         res.send(doc);
+    //       }
+    //     })
+    // }
+});
+
+//add new note
+app.post("/articles/:id", function(req, res) {
+  var newNote = new newNote(req.body);
+
+        newNote.save(function(error, doc) {
+          if (error) {
+            console.log(error)
+          }
+          else {
+            Article.findOneAndUpdate({"_id": req.params.id}, {"note": doc._id})
+              .exec(function(err, doc) {
+                if (err) {
+                  console.log(err)
+                }
+                else {
+                  res.send(doc);
+                }
+              });
+          }
+        });
+});
+
+//update note
+  app.get("/articles/:id", function(req, res) {
+    Article.findOne({ "_id": req.params.id })
+      .populate("note")
+      .exec(function(err, doc) {
+        if (err) {
+          console.log(err);
+        } else { 
+          res.json(doc);
+        }
+      });
+  });
+
+
+//delete note
+app.delete("/delete/:id", function(req, res) {
+  Note.remove({ "_id": req.params.id}, function(error, doc) {
+    if (error) {
+      console.log(error);
+    }
+    else {
+      console.log("Deleted");
+    }
+  });
+});
+
 };
 

@@ -1,15 +1,16 @@
-<h4>Your Saved Articles</h4>
-<button class="submit" href="/">Return to Home Page</button>
+<h2>Your Saved Articles</h4>
 
-{{#each articles.savedArticles}}
+{{#each articles}}
+  {{#if this.savedArticle}}
   <div class="row">
     <div class="col-sm-12 articleBox">
       <h2 class="articleTitle">{{this.title}}</h2>
       <h3 class="articleLink">{{this.link}}</h2>
-      <button data-id="{{_id}}" title-id="{{title}}" type="submit">Add note</button>
-      <button data-id="{{_id}}" data-id="{{_id}}" title-id="{{title}}" class="btn" type="submit">Delete this</button>
+      <button data-id="{{this._id}}" class="btn addNote" type="submit">Add note</button>
+      <button data-id="{{this._id}}" class="btn deleteNote" type="submit">Delete this</button>
     </div>
   </div>
+  {{/if}}
 {{/each}}
 
 
