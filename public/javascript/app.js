@@ -20,7 +20,7 @@ $(document).on("click", ".addNote", function() {
   var currentId = $(this).attr("id");
 
   $.ajax({
-    method: "GET"
+    method: "GET",
     url: "/articles/" + currentId
   })
   .done(function(data) {
