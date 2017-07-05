@@ -1,0 +1,50 @@
+body {
+  padding: 20px;
+}
+
+.jumbotron {
+  text-align: center;
+  color:white;
+  font-family: 'Shrikhand', cursive;
+  background-color:#1c4d8a;
+  border-radius: 25px;
+}
+
+.viewSaved {
+  background-color: white;
+  color:#1c4d8a;
+}
+
+.scrapeBtn {
+  background-color: #4970A1;
+  color:white;
+}
+
+#indexHeader {
+  text-align: center;
+  color:#4970A1;
+  font-family: 'Shrikhand', cursive;
+  padding:2px;
+}
+
+.articleBox {
+  border: black 1px dotted;
+  border-radius: 25px;
+  margin: 5px;
+  text-align: center;
+  font-family: 'Josefin Slab', cursive;
+  padding:5px;
+  background-color:#7F9ABD;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left:0;
+  bottom:0;
+  height:100px;
+  background-color:#a5b8d0;
+  padding:2px;
+  font-family: 'Shrikhand', cursive;
+}

@@ -1,7 +1,7 @@
 //test
-$(".test").on("click", function() {
-  alert("hey!");
-})
+$("#test").on("click", function() {
+  console.log("you suck");
+});
 
 //to display note modal
 function showModal() {

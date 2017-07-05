@@ -7,27 +7,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>NewsCollector</title>
+    <title>CradleScraper</title>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!--Our CSS link-->
-    <link rel="stylesheet" type="text/css" href="">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Permanent+Marker|Yellowtail|Shrikhand" rel="stylesheet">
+    <!--My CSS link-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
     <body>
         <div class="jumbotron">
-            <h1>NewsCollector: The Onion Edition</h1>
-            <p>A collection of the latest headlines from the internet's finest news source.</p>
+            <h1>CradleScraper</h1>
+            <h2>Check out all the acts coming to the Cat's Cradle</h2>
             
-            <p><a class="btn btn-primary btn-lg test" href="/saved" role="button">See saved headlines!</a></p>
+            <p><a class="btn btn-lg viewSaved" href="/saved" role="button">VIEW YOUR SAVED ACTS</a></p>
         </div>
         {{{ body }}}
 
@@ -48,6 +47,11 @@
             </div>
             </div>
 		</div>
+        <footer>
+            <p>Copyright &copy; Cat's Cradle</p>
+            <p>All information belongs to Cat's Cradle.</p>
+            <p>Website: <a href="http://catscradle.com/">catscradle.com</a></p>
+        </footer>
     </body>
-<script type="text/javascript" src="./assets/javascript/app.js"></script>
+     <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </html>

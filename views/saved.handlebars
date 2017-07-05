@@ -1,4 +1,4 @@
-<h2>Your Saved Articles</h4>
+<h2>Acts you saved</h4>
 
 {{#each articles}}
   {{#if this.savedArticle}}
@@ -7,7 +7,7 @@
       <h2 class="articleTitle">{{this.title}}</h2>
       <h3 class="articleLink">{{this.link}}</h2>
       <button data-id="{{this._id}}" class="btn addNote" type="submit">Add note</button>
-      <button data-id="{{this._id}}" class="btn deleteNote" type="submit">Delete this</button>
+      <button data-id="{{this._id}}" class="btn deleteNote" type="submit">Delete this act</button>
     </div>
   </div>
   {{/if}}
