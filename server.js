@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 var mongodbURI = "mongodb://heroku_wcsq2591:of7uheoiv7q5rkie7sc28qfvqj@ds139082.mlab.com:39082/heroku_wcsq2591";
 
-// mongoose.connect(mongodbURI);
-mongoose.connect("mongodb://localhost/articles_db");
+mongoose.connect(mongodbURI);
+// mongoose.connect("mongodb://localhost/articles_db");
 var db = mongoose.connection;
 
 db.on("error", function(error) {
@@ -44,5 +44,5 @@ require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 app.listen(PORT, function() {
-  console.log("News is being collected on port " + PORT + "!!");
+  console.log("Cat's Cradle gigs now being collected on port " + PORT + "!!");
 });

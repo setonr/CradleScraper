@@ -1,7 +1,6 @@
-//test
-$("#test").on("click", function() {
-  console.log("you suck");
-});
+$(document).on("click", "#test", function() {
+  alert("hey!");
+})
 
 //to display note modal
 function showModal() {
@@ -40,7 +39,7 @@ $(document).on("click", ".addNote", function() {
 });
 
 //savenote on click
-$("#savenote").on("click", function() {
+$(document).on("click", "#savenote", function() {
   var currentId = $(this).attr("data-id");
 
   $.ajax({
@@ -61,7 +60,7 @@ $("#savenote").on("click", function() {
 });
 
 //to save an article from index
-$(".saveArticle").on("click", function() {
+$(document).on("click", ".saveArticle", function() {
   var currentId = $(this).attr("id");
   console.log(currentId);
 
