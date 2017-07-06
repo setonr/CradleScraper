@@ -24,7 +24,7 @@ $(document).on("click", ".addNote", function() {
     $(".modal-title").html("Add Note To: " + data.title);
     $(".modal-body").append("<input id='titleinput' name='title' placeholder='Note Title'><br>");
     $(".modal-body").append("<textarea id='bodyinput' name='body' placeholder='Your note'></textarea><br>");
-    $(".modal-body").append("<button data-id'" + data._id + "' id='savenote'>Save Note</button>");
+    $(".modal-body").append("<button id ='savenote'>Save Note</button>");
 
     if (data.note) {
       $("#titleinput").val(data.note.title);
