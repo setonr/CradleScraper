@@ -47,7 +47,7 @@ $(document).on("click", "#savenote", function() {
   })
   .done(function(data) {
     console.log(data);
-    $("#notes").html(data);
+    $("#notes").append(data);
   });
 
   $("#titleinput").val("");

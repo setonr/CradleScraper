@@ -51,7 +51,7 @@ app.post("/saved/:id", function(req, res) {
 
 //add new note
 app.post("/articles/:id", function(req, res) {
-  var newNote = new newNote(req.body);
+  var newNote = new Note(req.body);
 
         newNote.save(function(error, doc) {
           if (error) {
