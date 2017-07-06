@@ -14,7 +14,6 @@ $(document).on("click", ".addNote", function() {
   $("#notes").empty();
 
   var currentId = $(this).attr("id");
-  alert(currentId);
 
   $.ajax({
     method: "GET",
@@ -23,9 +22,9 @@ $(document).on("click", ".addNote", function() {
   .done(function(data) {
     console.log(data);
     $(".modal-title").html("Add Note To: " + data.title);
-    $(".modal-body").html("<input id='titleinput' name='title' placeholder='Note Title'>");
-    $(".modal-body").append("<input id='authorName' name='author' placeholder='Your Name'>");
-    $(".modal-body").append("<textarea id='bodyinput' name='body' placeholder='Your note'></textarea>");
+    $(".modal-body").append("<input id='titleinput' name='title' placeholder='Note Title'><br>");
+    $(".modal-body").append("<input id='authorName' name='author' placeholder='Your Name'><br>");
+    $(".modal-body").append("<textarea id='bodyinput' name='body' placeholder='Your note'></textarea><br>");
     $(".modal-body").append("<button data-id'" + data._id + "' id='savenote'>Save Note</button>");
 
     if (data.note) {
@@ -37,7 +36,7 @@ $(document).on("click", ".addNote", function() {
 
 //savenote on click
 $(document).on("click", "#savenote", function() {
-  var currentId = $(this).attr("data-id");
+  var currentId = $(this).attr("id");
 
   $.ajax({
     method: "POST",
@@ -74,7 +73,7 @@ $(document).on("click", ".saveArticle", function() {
 });
 
 //to delete a note
-$(".deleteNote").on("click", function() {
+$(document).on("click", ".deleteNote", function() {
   var currentId= $(this).attr("id");
   console.log(currentId);
 
