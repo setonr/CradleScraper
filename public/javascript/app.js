@@ -23,7 +23,6 @@ $(document).on("click", ".addNote", function() {
     console.log(data);
     $(".modal-title").html("Add Note To: " + data.title);
     $(".modal-body").append("<input id='titleinput' name='title' placeholder='Note Title'><br>");
-    $(".modal-body").append("<input id='authorName' name='author' placeholder='Your Name'><br>");
     $(".modal-body").append("<textarea id='bodyinput' name='body' placeholder='Your note'></textarea><br>");
     $(".modal-body").append("<button data-id'" + data._id + "' id='savenote'>Save Note</button>");
 
@@ -48,7 +47,7 @@ $(document).on("click", "#savenote", function() {
   })
   .done(function(data) {
     console.log(data);
-    $("#notes").empty();
+    $("#notes").html(data);
   });
 
   $("#titleinput").val("");
