@@ -24,7 +24,7 @@ app.use(bodyParser.json({type: "application/vnd.api+json" }));
 
 app.use(express.static(path.join(__dirname + "/public")));
 
-var mongodbURI = "mongodb://heroku_wcsq2591:of7uheoiv7q5rkie7sc28qfvqj@ds139082.mlab.com:39082/heroku_wcsq2591";
+var mongodbURI = "mongodb://heroku_p5trvtn1:rl60gcsu64n40ussaj0lumfim9@ds127994.mlab.com:27994/heroku_p5trvtn1";
 
 mongoose.connect(mongodbURI);
 // mongoose.connect("mongodb://localhost/articles_db");
