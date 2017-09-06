@@ -2,7 +2,6 @@ var request=require("request");
 var cheerio=require("cheerio");
 
 var Article=require("./../models/Article");
-var Note=require("./../models/Note");
 
 module.exports = function(app) {
   //Once articles are added to db, we will retrieve them
